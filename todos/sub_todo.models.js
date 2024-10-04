@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const subTodo = mongoose.Schema({
+const subTodo =new mongoose.Schema({
         content: {
             type: String,
             required: true
@@ -9,7 +9,7 @@ const subTodo = mongoose.Schema({
             type: Boolean,
             default: false
         },
-        createdBy{
+        createdBy:{
             type: mongoose.Schema.Types.ObjectId,
             ref:'User'
         }
